@@ -1,4 +1,6 @@
 class HelperGrid {
+    // this is not part off the project but it help us the developers to visualize where every components should placed on the canvas
+    // so we will draw a grid on the canvas then we can count how and where to place different objects/images
     drawGrid(w, h, ctx) {
         const gridXAxis = [];
         const gridYAxis = [];

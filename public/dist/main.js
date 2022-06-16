@@ -66,12 +66,23 @@ class ITGTechTask {
         }
         this.mostOccurance = item;
     }
-    // this method is our eventListener listening for clicks on the spin image 
+    getXY(event) {
+        this.rect = this.canvas.getBoundingClientRect();
+        return {
+            x: event.clientX - this.rect.left,
+            y: event.clientY - this.rect.top
+        };
+    }
+    resize() {
+        window.addEventListener("resize", () => {
+            this.update();
+        });
+    }
     spinnerClicked() {
         this.canvas.addEventListener("click", (e) => {
+            const pos = this.getXY(e);
             // we have given the coordinates for the spin image in this if statement!
-            if (e.clientX >= 700 && e.clientX <= 800 && e.clientY >= 300 && e.clientY <= 470) {
-                // console.log("clicked!!")
+            if (pos.x >= 680 && pos.x <= 800 && pos.y >= 390 && pos.y <= 510) {
                 if (this.win) { // if victory we reset all the values so the game can be played again!
                     this.initialBet = Math.floor(Math.random() * 10) + 1;
                     this.idxRandom = [];
@@ -328,5 +339,6 @@ class ITGTechTask {
     }
 }
 const itg = new ITGTechTask();
+itg.resize();
 itg.spinnerClicked();
 //# sourceMappingURL=main.js.map

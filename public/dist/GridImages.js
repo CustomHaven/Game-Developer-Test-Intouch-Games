@@ -50,7 +50,6 @@ class GridImages {
                 idx++;
             }
         }
-        // console.log(arr);
         this.gridArray = gridArray;
     }
 }

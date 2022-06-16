@@ -1,4 +1,5 @@
 class ImageMaker {
+    // here we make all the images draw them to canvas in respective of what is needed using the methods off simple draw or more complexDraw method
     public image: HTMLImageElement;
     public position: { x: number, y: number };
     public width: number;

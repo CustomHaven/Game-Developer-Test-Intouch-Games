@@ -12,12 +12,14 @@ class ITGTechTask
 
     private backgroundImage: HTMLImageElement = new Image();
 
+    private rect: DOMRect;
+
     public initialBet: number;
 
     // this helper is a grid we laidout for the entire canvas so that it helps us to draw and place our images 
     public helper: HelperGrid;
 
-    // Grid images will make a grid array of [[3x]] so 9x9 to place the x17 etc
+    // Grid images will make a grid array of array of object looking like this [ [{}], [{}], [{}] ] so 3x3 to place the x17 at randomly etc
     public gridClose: GridImages;
     public gridOpen: GridImages;
     // As we need a lot of images it makes sense to make a class for them so we can create them fast and efficent class ImageMaker
@@ -149,13 +151,28 @@ class ITGTechTask
         this.mostOccurance = item;
     }
 
-    // this method is our eventListener listening for clicks on the spin image 
+    getXY(event: MouseEvent): {x:number, y:number} {
+        this.rect = this.canvas.getBoundingClientRect();
+        return {
+            x: event.clientX - this.rect.left,
+            y: event.clientY - this.rect.top
+        }
+    }
+
+    resize() {
+        window.addEventListener("resize", () => {
+            this.update();
+        });
+    }
+
     spinnerClicked():void {
 
             this.canvas.addEventListener("click", (e) => {
+                const pos = this.getXY(e);
+
                 // we have given the coordinates for the spin image in this if statement!
-                if (e.clientX >= 700 && e.clientX <= 800 && e.clientY >= 300 && e.clientY <= 470) {
-                    // console.log("clicked!!")
+                if (pos.x >= 680 && pos.x <= 800 && pos.y >= 390 && pos.y <= 510) {
+
                     if (this.win) { // if victory we reset all the values so the game can be played again!
                         this.initialBet = Math.floor(Math.random() * 10) + 1;
                         this.idxRandom = [];
@@ -457,4 +474,5 @@ class ITGTechTask
 
 
 const itg = new ITGTechTask();
+itg.resize();
 itg.spinnerClicked();

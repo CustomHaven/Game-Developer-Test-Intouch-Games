@@ -1,6 +1,9 @@
 import ImageMaker from "./ImageMaker.js";
 
 class GridImages {
+    // grid images is an array of array of object so its nested like this [[{}], [{}], [{}]]
+    // and the values x,y,img,idx is placed inside the object thus we make the grid shape of 3x3 as can be seen in the game
+    // covers for both the closed case and open case images
     public gridArray: {x: number, y: number, img: ImageMaker, idx:number}[][];
 
     constructor(src: string, width?: number, height?: number) {
@@ -54,7 +57,7 @@ class GridImages {
             idx++;
             }
         }
-        // console.log(arr);
+
         this.gridArray = gridArray;
     }
 }

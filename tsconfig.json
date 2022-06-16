@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
         "outDir": "./public/dist",
-        "target": "es2020",
+        "target": "es2017",
         "sourceMap": true,
         "lib": [
             "es5",
             "dom",
             "es6",
+            "ES2016.Array.Include",
             "es2017"
         ],
         "noUnusedLocals": true,
