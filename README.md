@@ -2,6 +2,10 @@
 
 --------------
 
+Project is completed and the game can played [HERE](https://charming-mooncake-727192.netlify.app/public/index.html)
+
+https://charming-mooncake-727192.netlify.app/public/index.html
+
 ## Table of Content
 
 - [How to Clone the Project](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#How-to-clone-the-project)
