@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "./public/dist",
+        "target": "es2020",
+        "sourceMap": true,
+        "lib": [
+            "es5",
+            "dom",
+            "es6",
+            "es2017"
+        ],
+        "noUnusedLocals": true,
+        "module": "es6"
+    },
+    "include": ["./src/**/*.ts"]
+}
