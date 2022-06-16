@@ -39,6 +39,10 @@ This is very important as it makes you run your local server thus you by pass an
 From the terminal navigate to the directory were your files live and run ``http-server`` spin up a server.
 
 
+If you dont want to install http-server and use VSCode Live Server you can just add the extention in your VSCode and Go Live
+
+> Install it here [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
 ### General Information
 ---
 This is the main repository for the Game Development challenge test.
@@ -50,9 +54,9 @@ Visit [main.ts](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games
 
 ### Technologies
 ---
-- HTML5 - Canvas
+- HTML5 Canvas - Placed inside [public directory](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games/tree/master/public)
 - JavaScript - (not used but its bundled from tsconfig.json)
-- Typescript
+- Typescript - All files places inside [src directory](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games/tree/master/src)
 
 
 ### Mission
@@ -97,7 +101,7 @@ All Typescript files found inside the [src directory](https://github.com/CustomH
 ### Status
 ---
 
-**Project completed** Canvas in the center of the page and is playable at [visit](https://aback-ship.surge.sh/). Hope you enjoy the game!
+**Project completed** Canvas is in the center of the page and is playable at [visit](https://charming-mooncake-727192.netlify.app/public/index.html). Hope you enjoy the game!
 
 
 ### Contact Me
