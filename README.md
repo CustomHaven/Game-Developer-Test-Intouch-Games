@@ -12,7 +12,7 @@ https://charming-mooncake-727192.netlify.app/public/index.html
 - [General Information](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#general-information)
 - [Technologies](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#technologies)
 - [Mission](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#Mission)
-- [HTML5 Canvas](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#HTML5-canvas)
+- [HTML5 Canvas](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#html5---canvas)
 - [JavaScript](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#Javascript)
 - [Typescript](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#Typescript)
 - [Status](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games#Status)
@@ -51,9 +51,11 @@ If you dont want to install http-server and use VSCode Live Server you can just 
 ---
 This is the main repository for the Game Development challenge test.
 
-Visit https://aback-ship.surge.sh/ to play the game.
+To play the game visit:
 
-Visit [main.ts](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games/blob/master/src/main.ts) to see the code for the game.
+ https://charming-mooncake-727192.netlify.app/public/index.html
+
+Visit [main.ts](https://github.com/CustomHaven/Game-Developer-Test-Intouch-Games/blob/master/src/main.ts) to see the main code for the game.
 
 
 ### Technologies
