@@ -2,10 +2,9 @@ import VictoryTickets from "./VictoryTickets.js";
 import GridImages from "./GridImages.js";
 import ImageMaker from "./ImageMaker.js";
 import HelperGrid from "./HelperGrid.js";
-class ITGTechTask {
+class BusterSafe {
     // So now Enjoy the code
     constructor() {
-        this.previousUpdateTime = 0;
         this.backgroundImage = new Image();
         this.canvas = document.getElementById('canvas');
         this.context = this.canvas.getContext("2d");
@@ -30,7 +29,8 @@ class ITGTechTask {
         this.frames;
         this.ledFrames = 0;
         this.maxFrames = 0; // falsy
-        this.spinnerArray = [758, 1079, 1039, 999, 958, 918, 877, 838, 798];
+        // this.spinnerArray = [ 398, 359, 319, 279, 238, 198, 518, 478, 438 ]; // a bit longer game at least a full spin
+        this.spinnerArray = [398, 359, 319, 279, 238, 198, 157, 118, 438]; // shorter and faster game
         this.idxRandom = [];
         this.removeIdxRandomDuplicates = [];
         this.toggleSpinning = true;
@@ -41,10 +41,6 @@ class ITGTechTask {
         this.win = false;
         this.infiniteFrames = 1;
         this.toggleRed = true;
-        // never used this
-        this.previousUpdateTime = new Date().getSeconds();
-        // this.spinnerClicked.bind(this);
-        // this.mostInside.bind(this);
     }
     // We find the mostOccurance of example x17 in the array game
     mostInside() {
@@ -122,10 +118,7 @@ class ITGTechTask {
         // }
     }
     // Main Game Loop
-    update(currentTime = 0) {
-        // const deltaTime: number = currentTime - this.previousUpdateTime;
-        // this.previousUpdateTime = currentTime;
-        // this.previousUpdateTime = now;
+    update() {
         // // Clear the canvas
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         // Draw the background image
@@ -223,7 +216,6 @@ class ITGTechTask {
             300, //          8 dWidth
             300 //           9 dHeight
             );
-            // this.spinA.draw(this.context);
         }
         else if (this.frames === this.maxFrames && this.win === true) {
             this.greenDial.draw(this.context);
@@ -238,7 +230,6 @@ class ITGTechTask {
             300, //         8 dWidth
             300 //          9 dHeight
             );
-            // this.spinA.draw(this.context);
         }
         // red screen displays information of turns left and what numbers the player got for their turns
         if (this.win === false) {
@@ -338,7 +329,7 @@ class ITGTechTask {
         window.requestAnimationFrame(this.update.bind(this));
     }
 }
-const itg = new ITGTechTask();
-itg.resize();
-itg.spinnerClicked();
+const busterSafe = new BusterSafe();
+busterSafe.resize();
+busterSafe.spinnerClicked();
 //# sourceMappingURL=main.js.map

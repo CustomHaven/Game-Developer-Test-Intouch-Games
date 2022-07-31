@@ -77,6 +77,7 @@ class BusterSafe
     public twoOfAKind: {idxNum: number, str: string}[];
     public win: boolean;
 
+
     // So now Enjoy the code
 
     constructor()
@@ -110,7 +111,8 @@ class BusterSafe
         this.frames;
         this.ledFrames = 0;
         this.maxFrames = 0; // falsy
-        this.spinnerArray = [ 758, 1079, 1039, 999, 958, 918, 877, 838, 798 ];
+        // this.spinnerArray = [ 398, 359, 319, 279, 238, 198, 518, 478, 438 ]; // a bit longer game at least a full spin
+        this.spinnerArray = [ 398, 359, 319, 279, 238, 198, 157, 118, 438 ]; // shorter and faster game
         this.idxRandom = [];
         this.removeIdxRandomDuplicates = [];
         this.toggleSpinning = true;
@@ -198,6 +200,7 @@ class BusterSafe
                             this.mostInside();
                             
                             this.maxFrames = this.spinnerArray[this.randomInt];
+
                             
                         } else { // here we delete the duplicate randomInt from the twoOfAKind array so the player has to spin again!
                             this.twoOfAKind.pop();
@@ -214,7 +217,6 @@ class BusterSafe
     // Main Game Loop
     public update(): void
     {
-
         // // Clear the canvas
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
