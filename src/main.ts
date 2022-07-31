@@ -3,12 +3,10 @@ import GridImages from "./GridImages.js";
 import ImageMaker from "./ImageMaker.js";
 import HelperGrid from "./HelperGrid.js";
 
-class ITGTechTask
+class BusterSafe
 {
     private canvas: HTMLCanvasElement;
     private context: CanvasRenderingContext2D;
-
-    public previousUpdateTime: number = 0;
 
     private backgroundImage: HTMLImageElement = new Image();
 
@@ -124,10 +122,6 @@ class ITGTechTask
         this.infiniteFrames = 1;
         this.toggleRed = true;
 
-        // never used this
-        this.previousUpdateTime = new Date().getSeconds();
-        // this.spinnerClicked.bind(this);
-        // this.mostInside.bind(this);
     }
 
     // We find the mostOccurance of example x17 in the array game
@@ -218,12 +212,9 @@ class ITGTechTask
     }
 
     // Main Game Loop
-    public update( currentTime: number = 0 ): void // not used the currentTime param
+    public update(): void
     {
-        // const deltaTime: number = currentTime - this.previousUpdateTime;
-        // this.previousUpdateTime = currentTime;
 
-        // this.previousUpdateTime = now;
         // // Clear the canvas
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -342,7 +333,7 @@ class ITGTechTask
                 300,//          8 dWidth
                 300//           9 dHeight
             );        
-            // this.spinA.draw(this.context);
+            
         } else if (this.frames === this.maxFrames && this.win === true) {
             this.greenDial.draw(this.context);
             this.spinWheelResult.complexRotateLoop(
@@ -357,7 +348,7 @@ class ITGTechTask
                 300, //         8 dWidth
                 300 //          9 dHeight
             );
-            // this.spinA.draw(this.context);
+            
         }
 
 
@@ -473,6 +464,6 @@ class ITGTechTask
 }
 
 
-const itg = new ITGTechTask();
-itg.resize();
-itg.spinnerClicked();
+const busterSafe = new BusterSafe();
+busterSafe.resize();
+busterSafe.spinnerClicked();
